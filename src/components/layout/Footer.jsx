@@ -5,7 +5,7 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer className="footer-section">
-      <div className="footer-container">
+      <div className="container">
         <div className="footer-links">
           <a href="#order-section">Refund Policy</a>
           <a href="#order-section">Privacy Policy</a>

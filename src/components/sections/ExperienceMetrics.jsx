@@ -34,21 +34,23 @@ export default function ExperienceMetrics() {
 
   return (
     <section className="experience-bar-section">
-      <div className="experience-card">
-        <h3 className="experience-title">
-          <Sparkles size={20} />
-          The Surma Valley Experience
-          <Sparkles size={20} />
-        </h3>
+      <div className="container">
+        <div className="experience-card">
+          <h3 className="experience-title">
+            <Sparkles size={20} />
+            The Surma Valley Experience
+            <Sparkles size={20} />
+          </h3>
 
-        <div className="metrics-grid">
-          {metrics.map((item, index) => (
-            <div key={index} className="metric-item">
-              <div className="icon-box">{item.icon}</div>
-              <span className="metric-value">{item.value}</span>
-              <span className="metric-label">{item.label}</span>
-            </div>
-          ))}
+          <div className="metrics-grid">
+            {metrics.map((item, index) => (
+              <div key={index} className="metric-item">
+                <div className="icon-box">{item.icon}</div>
+                <span className="metric-value">{item.value}</span>
+                <span className="metric-label">{item.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

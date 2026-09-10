@@ -7,7 +7,7 @@ import { ArrowRight, Leaf, Sparkles, CheckCircle2 } from 'lucide-react';
 export default function HeroBanner({ onOrderClick }) {
   return (
     <section className="hero-banner-section">
-      <div className="hero-container">
+      <div className="container">
         {/* Brand Logo Header */}
         <div className="hero-top-logo">
           <div className="brand-logo-badge">
