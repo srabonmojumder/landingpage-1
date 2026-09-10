@@ -24,7 +24,7 @@ export default function WhyChooseUs() {
 
   return (
     <section className="why-choose-section">
-      <div className="why-container">
+      <div className="container">
         {/* Main Card */}
         <div className="why-card">
           <div className="why-header-bar">
