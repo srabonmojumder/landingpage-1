@@ -1,0 +1,40 @@
+@use "../abstracts/tokens" as *;
+
+.footer-section {
+  background: #0f3d23;
+  color: #d1fae5;
+  padding: 3rem 0 2.5rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(229, 169, 60, 0.2);
+
+  .footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+
+    a {
+      font-size: 1.05rem;
+      color: #a7f3d0;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer-copy {
+    font-size: 0.95rem;
+    color: #6ee7b7;
+    opacity: 0.85;
+  }
+}

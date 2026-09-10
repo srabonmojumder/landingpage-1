@@ -1,0 +1,56 @@
+@use "../abstracts/tokens" as *;
+
+.header-top-bar {
+  background: linear-gradient(90deg, #0d3b22 0%, #165b33 50%, #0d3b22 100%);
+  color: #f1f8f1;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(229, 169, 60, 0.3);
+
+  .promo-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    justify-content: center;
+
+    .highlight {
+      color: #ffd166;
+      font-weight: 700;
+      background: rgba(255, 209, 102, 0.15);
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.brand-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #0f3d23;
+  color: #ffffff;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  .logo-icon {
+    color: #4ade80;
+  }
+
+  .brand-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
+  }
+
+  .brand-sub {
+    font-size: 0.85rem;
+    color: #a7f3d0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
