@@ -1,0 +1,78 @@
+@use "../abstracts/tokens" as *;
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #ff7700 0%, #e65100 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1rem 2.8rem;
+  border-radius: 9999px;
+  box-shadow: 0 6px 20px rgba(230, 81, 0, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+  }
+
+  &:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 28px rgba(230, 81, 0, 0.45);
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.btn-pulse {
+  animation: pulseButton 2s infinite;
+}
+
+@keyframes pulseButton {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 119, 0, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(255, 119, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 119, 0, 0);
+  }
+}
+
+.section-badge-header {
+  text-align: center;
+  margin-bottom: 2.25rem;
+
+  .badge-title {
+    display: inline-block;
+    background: linear-gradient(135deg, #1b7a43 0%, #0d4d27 100%);
+    color: #ffffff;
+    font-size: 1.55rem;
+    font-weight: 700;
+    padding: 0.85rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(13, 77, 39, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}

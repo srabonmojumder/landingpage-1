@@ -1,0 +1,40 @@
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin glassmorphism($bg: rgba(255, 255, 255, 0.85), $blur: 12px, $border: rgba(255, 255, 255, 0.3)) {
+  background: $bg;
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  border: 1px solid $border;
+}
+
+@mixin hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@mixin section-title-badge {
+  background: linear-gradient(135deg, #1b7a43 0%, #0d4d27 100%);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.35rem;
+  box-shadow: 0 4px 15px rgba(13, 77, 39, 0.25);
+  letter-spacing: 0.5px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}

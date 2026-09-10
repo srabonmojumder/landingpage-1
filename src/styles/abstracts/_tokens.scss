@@ -1,0 +1,49 @@
+// Design Tokens for Surma Valley Tea Landing Page
+
+// Tea Brand Color Palette
+$primary-green: #185a36;
+$primary-green-dark: #0f3d23;
+$primary-green-light: #2e8b57;
+$primary-emerald: #10b981;
+$tea-leaf-accent: #2e7d32;
+$tea-garden-green: #1b4332;
+
+$accent-orange: #ff7700;
+$accent-orange-hover: #e06000;
+$accent-gold: #e5a93c;
+$accent-gold-light: #fbeec1;
+
+$bg-page-light: #eef7ee;
+$bg-card-light: #f6fbf6;
+$bg-white: #ffffff;
+$bg-glass: rgba(255, 255, 255, 0.88);
+$bg-glass-dark: rgba(15, 61, 35, 0.85);
+
+$text-dark: #1a2e1d;
+$text-sub: #3d5641;
+$text-muted: #6b856f;
+$text-light: #ffffff;
+$text-gold: #f3c242;
+
+$border-subtle: rgba(24, 90, 54, 0.12);
+$border-strong: rgba(24, 90, 54, 0.25);
+$border-gold: rgba(229, 169, 60, 0.4);
+
+// Shadows
+$shadow-sm: 0 4px 12px rgba(15, 61, 35, 0.06);
+$shadow-md: 0 8px 24px rgba(15, 61, 35, 0.1);
+$shadow-lg: 0 16px 36px rgba(15, 61, 35, 0.15);
+$shadow-glow: 0 0 25px rgba(255, 119, 0, 0.35);
+$shadow-green-glow: 0 0 25px rgba(16, 185, 129, 0.25);
+
+// Typography
+$font-bengali: 'Hind Siliguri', 'Noto Sans Bengali', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-display: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+
+// Transitions & Curves
+$transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+$transition-fast: all 0.18s ease;
+$radius-sm: 8px;
+$radius-md: 14px;
+$radius-lg: 20px;
+$radius-full: 9999px;
