@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import useScrollReveal from '@/hooks/useScrollReveal';
 import HeaderBar from '@/components/layout/HeaderBar';
 import HeroBanner from '@/components/sections/HeroBanner';
 import ExperienceMetrics from '@/components/sections/ExperienceMetrics';
@@ -13,6 +14,7 @@ import Footer from '@/components/layout/Footer';
 import FloatingCTA from '@/components/layout/FloatingCTA';
 
 export default function LandingPage() {
+  useScrollReveal();
   const [selectedProductBlend, setSelectedProductBlend] = useState('single');
 
   const scrollToOrder = () => {

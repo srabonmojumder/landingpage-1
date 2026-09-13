@@ -59,7 +59,7 @@ export default function ProductShowcase({ onSelectProduct }) {
       <div className="container">
         <div className="showcase-container">
           {/* Blend Navigation Tabs */}
-          <div className="blend-tabs-wrap">
+          <div className="blend-tabs-wrap reveal-on-scroll reveal-fade">
             <button
               type="button"
               className={`blend-tab-btn ${activeTab === 'all' ? 'active' : ''}`}
@@ -91,9 +91,9 @@ export default function ProductShowcase({ onSelectProduct }) {
           </div>
 
           {/* Main Display Card */}
-          <div className="gallery-main-card">
+          <div className="gallery-main-card reveal-on-scroll delay-100">
             {activeTab === 'all' ? (
-              <div className="trio-display-wrap">
+              <div key="all" className="trio-display-wrap animate-tab-fade">
                 <img
                   src="/images/tea-pouches-trio.jpg"
                   alt="Surma Valley Tea Pouches Trio Collection"
@@ -101,7 +101,7 @@ export default function ProductShowcase({ onSelectProduct }) {
               </div>
             ) : (
               selectedProduct && (
-                <div className="single-product-grid">
+                <div key={activeTab} className="single-product-grid animate-tab-fade">
                   <div className="pouch-img-wrap">
                     <img src={selectedProduct.image} alt={selectedProduct.title} />
                   </div>

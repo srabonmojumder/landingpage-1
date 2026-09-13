@@ -9,7 +9,7 @@ export default function HeroBanner({ onOrderClick }) {
     <section className="hero-banner-section">
       <div className="container">
         {/* Brand Logo Header */}
-        <div className="hero-top-logo">
+        <div className="hero-top-logo reveal-on-scroll reveal-fade">
           <div className="brand-logo-badge">
             <Leaf className="logo-icon" size={24} />
             <div>
@@ -21,7 +21,7 @@ export default function HeroBanner({ onOrderClick }) {
 
         {/* Hero Grid */}
         <div className="hero-content-grid">
-          <div className="hero-text-block">
+          <div className="hero-text-block reveal-on-scroll reveal-left delay-100">
             <h1 className="hero-main-title">
               এক্সপোর্ট কোয়ালিটি চা -{' '}
               <span className="highlight-word">খাঁটি ন্যাচারাল ফ্লেভার</span> ও দুর্দান্ত স্বাদ।
@@ -54,8 +54,8 @@ export default function HeroBanner({ onOrderClick }) {
             </div>
           </div>
 
-          <div className="hero-visual-card">
-            <div className="image-wrapper">
+          <div className="hero-visual-card reveal-on-scroll reveal-right delay-200">
+            <div className="image-wrapper animate-gentle-float">
               <img
                 src="/images/surma-tea-box.jpg"
                 alt="Surma Valley Export Quality Organic Tea Box"

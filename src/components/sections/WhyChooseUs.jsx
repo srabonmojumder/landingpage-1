@@ -26,14 +26,17 @@ export default function WhyChooseUs() {
     <section className="why-choose-section">
       <div className="container">
         {/* Main Card */}
-        <div className="why-card">
+        <div className="why-card reveal-on-scroll">
           <div className="why-header-bar">
             আমাদের কাছ থেকে কেন নিবেন।
           </div>
 
           <div className="why-body-list">
             {reasons.map((item, index) => (
-              <div key={index} className="why-item">
+              <div
+                key={index}
+                className={`why-item reveal-on-scroll delay-${(index + 1) * 100}`}
+              >
                 <div className="why-icon">{item.icon}</div>
                 <div className="why-text">
                   <strong>{item.title} </strong>
@@ -45,7 +48,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Caution Notice Box */}
-        <div className="caution-box">
+        <div className="caution-box reveal-on-scroll reveal-scale delay-150">
           <div className="caution-title">
             <AlertTriangle size={20} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />
             সতর্কতাঃ
@@ -56,8 +59,8 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Hotline Call Box */}
-        <a href="tel:01911899865" className="hotline-banner-wrap">
-          <PhoneCall size={26} />
+        <a href="tel:01911899865" className="hotline-banner-wrap reveal-on-scroll delay-200">
+          <PhoneCall size={26} className="animate-phone-ring" />
           <span>প্রয়োজনে কল করুন:</span>
           <span className="phone-number">01911 899 865</span>
         </a>

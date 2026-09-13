@@ -35,8 +35,8 @@ export default function ExperienceMetrics() {
   return (
     <section className="experience-bar-section">
       <div className="container">
-        <div className="experience-card">
-          <h3 className="experience-title">
+        <div className="experience-card reveal-on-scroll reveal-scale">
+          <h3 className="experience-title reveal-on-scroll reveal-fade delay-100">
             <Sparkles size={20} />
             The Surma Valley Experience
             <Sparkles size={20} />
@@ -44,7 +44,10 @@ export default function ExperienceMetrics() {
 
           <div className="metrics-grid">
             {metrics.map((item, index) => (
-              <div key={index} className="metric-item">
+              <div
+                key={index}
+                className={`metric-item reveal-on-scroll delay-${(index + 1) * 100}`}
+              >
                 <div className="icon-box">{item.icon}</div>
                 <span className="metric-value">{item.value}</span>
                 <span className="metric-label">{item.label}</span>

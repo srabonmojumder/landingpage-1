@@ -1,0 +1,198 @@
+// ==========================================
+// Smooth & Subtle Animations System
+// Surma Valley Tea Landing Page
+// ==========================================
+
+@use "../abstracts/tokens" as *;
+
+// ------------------------------------------
+// 1. Scroll Reveal Engine
+// ------------------------------------------
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: 
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+
+  &.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  // Directional variants
+  &.reveal-fade {
+    transform: none;
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &.is-revealed {
+      opacity: 1;
+    }
+  }
+
+  &.reveal-scale {
+    transform: scale(0.96);
+    transition: 
+      opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &.is-revealed {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &.reveal-left {
+    transform: translateX(-24px);
+
+    &.is-revealed {
+      transform: translateX(0);
+    }
+  }
+
+  &.reveal-right {
+    transform: translateX(24px);
+
+    &.is-revealed {
+      transform: translateX(0);
+    }
+  }
+}
+
+// ------------------------------------------
+// 2. Micro Stagger Delays
+// ------------------------------------------
+.delay-50  { transition-delay: 50ms; }
+.delay-100 { transition-delay: 100ms; }
+.delay-150 { transition-delay: 150ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-250 { transition-delay: 250ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-350 { transition-delay: 350ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-450 { transition-delay: 450ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+
+// ------------------------------------------
+// 3. Ambient & Continuous Keyframes
+// ------------------------------------------
+
+// Gentle levitation for tea box / showcase cards
+@keyframes gentleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+// Subtle aura breathing glow
+@keyframes auraPulse {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+}
+
+// Silky tab switch crossfade
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Attention wiggle for hotline phone
+@keyframes phoneWiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(-10deg) scale(1.05);
+  }
+  20%, 40% {
+    transform: rotate(10deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+// Soft organic leaf sway
+@keyframes leafSway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+// Soft gleam/shimmer sweep
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+// ------------------------------------------
+// 4. Utility Animation Classes
+// ------------------------------------------
+.animate-gentle-float {
+  animation: gentleFloat 5s ease-in-out infinite;
+}
+
+.animate-tab-fade {
+  animation: tabFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-phone-ring {
+  animation: phoneWiggle 3.8s ease-in-out infinite;
+}
+
+.animate-leaf-sway {
+  animation: leafSway 4s ease-in-out infinite;
+}
+
+// ------------------------------------------
+// 5. Reduced Motion Accessibility
+// ------------------------------------------
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-on-scroll.reveal-left,
+  .reveal-on-scroll.reveal-right,
+  .reveal-on-scroll.reveal-scale {
+    transform: none !important;
+    transition: opacity 0.2s linear !important;
+    opacity: 1 !important;
+  }
+
+  .animate-gentle-float,
+  .animate-tab-fade,
+  .animate-phone-ring,
+  .animate-leaf-sway,
+  .btn-pulse {
+    animation: none !important;
+  }
+}

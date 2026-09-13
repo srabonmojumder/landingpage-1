@@ -138,14 +138,14 @@ export default function OrderForm({ selectedProductBlend }) {
   return (
     <section className="order-form-section" id="order-section">
       <div className="container">
-        <div className="order-form-wrapper">
-          <h2 className="order-main-heading">
+        <div className="order-form-wrapper reveal-on-scroll">
+          <h2 className="order-main-heading reveal-on-scroll reveal-fade delay-100">
             অর্ডার করতে নিচের ফরমটি পূরণ করে{' '}
             <span className="highlight-btn-text">“অর্ডার করুন”</span> বাটনে ক্লিক করুন।
           </h2>
 
           {/* Bundle Selection Cards */}
-          <div className="bundle-selection-grid">
+          <div className="bundle-selection-grid reveal-on-scroll delay-150">
             {bundles.map((bundle) => (
               <div
                 key={bundle.id}
@@ -167,7 +167,7 @@ export default function OrderForm({ selectedProductBlend }) {
           </div>
 
           {/* Active Product Bar with Quantity */}
-          <div className="product-item-preview-card">
+          <div className="product-item-preview-card reveal-on-scroll delay-200">
             <div className="product-left-info">
               <img
                 src={currentBundle.thumb}
@@ -203,7 +203,7 @@ export default function OrderForm({ selectedProductBlend }) {
           <form onSubmit={handleOrderSubmit}>
             <div className="order-grid-two-col">
               {/* Billing Info Inputs */}
-              <div className="billing-fields-col">
+              <div className="billing-fields-col reveal-on-scroll reveal-left delay-100">
                 <div className="section-sub-title">
                   <User size={18} />
                   <span>বিলিং ও ডেলিভারি তথ্য</span>
@@ -305,7 +305,7 @@ export default function OrderForm({ selectedProductBlend }) {
               </div>
 
               {/* Order Summary & Confirm */}
-              <div className="order-summary-col">
+              <div className="order-summary-col reveal-on-scroll reveal-right delay-200">
                 <div className="summary-card">
                   <div className="summary-title">আপনার অর্ডার সামারি</div>
 

@@ -40,14 +40,17 @@ export default function TeaBenefits() {
   return (
     <section className="tea-benefits-section">
       <div className="container">
-        <div className="benefits-card-container">
+        <div className="benefits-card-container reveal-on-scroll">
           <div className="benefits-header-bar">
             আসুন চায়ের নির্যাস উপভোগ করি।
           </div>
 
           <div className="benefits-list">
             {benefits.map((item, index) => (
-              <div key={index} className="benefit-item">
+              <div
+                key={index}
+                className={`benefit-item reveal-on-scroll delay-${(index + 1) * 100}`}
+              >
                 <div className="icon-badge">{item.icon}</div>
                 <div className="benefit-text">
                   <strong>{item.title} </strong>
@@ -56,7 +59,7 @@ export default function TeaBenefits() {
               </div>
             ))}
 
-            <div className="quote-highlight-banner">
+            <div className="quote-highlight-banner reveal-on-scroll reveal-scale delay-200">
               “স্বাদ ও স্বাস্থ্যের আস্থা, সুরমা ভ্যালি চায়ের স্নিগ্ধতা।”
             </div>
           </div>

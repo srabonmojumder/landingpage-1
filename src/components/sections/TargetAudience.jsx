@@ -40,14 +40,17 @@ export default function TargetAudience() {
   return (
     <section className="target-audience-section">
       <div className="container">
-        <div className="audience-card-container">
+        <div className="audience-card-container reveal-on-scroll">
           <div className="audience-header-bar">
             এই চা কাদের জন্য
           </div>
 
           <div className="audience-list">
             {audienceList.map((item, index) => (
-              <div key={index} className="audience-item">
+              <div
+                key={index}
+                className={`audience-item reveal-on-scroll delay-${(index + 1) * 100}`}
+              >
                 <div className="icon-wrapper">
                   {item.icon}
                 </div>
