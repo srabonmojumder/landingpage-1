@@ -28,13 +28,57 @@
 @mixin section-title-badge {
   background: linear-gradient(135deg, #1b7a43 0%, #0d4d27 100%);
   color: #ffffff;
-  padding: 12px 28px;
+  padding: 10px 20px;
   border-radius: 8px;
   display: inline-block;
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: clamp(1.15rem, 3.5vw, 1.35rem);
   box-shadow: 0 4px 15px rgba(13, 77, 39, 0.25);
   letter-spacing: 0.5px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
+
+// Responsive Breakpoints
+@mixin mobile-xs {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+// Touch ergonomics
+@mixin touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+

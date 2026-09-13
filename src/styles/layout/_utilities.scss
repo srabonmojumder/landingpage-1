@@ -9,8 +9,9 @@
   color: #ffffff;
   font-family: $font-bengali;
   font-weight: 700;
-  font-size: 1.35rem;
-  padding: 1rem 2.8rem;
+  font-size: clamp(1.15rem, 3.8vw, 1.35rem);
+  padding: 0.95rem 2.4rem;
+  min-height: 48px;
   border-radius: 9999px;
   box-shadow: 0 8px 24px rgba(234, 88, 12, 0.38), 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -20,6 +21,11 @@
   position: relative;
   overflow: hidden;
   letter-spacing: 0.01em;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 0.9rem 1.25rem;
+  }
 
   &::before {
     content: '';
@@ -64,20 +70,21 @@
 
 .section-badge-header {
   text-align: center;
-  margin-bottom: 2.25rem;
+  margin-bottom: 2rem;
 
   .badge-title {
     display: inline-block;
     background: linear-gradient(135deg, #14532d 0%, #064e3b 100%);
     color: #ffffff;
     font-family: $font-bengali;
-    font-size: 1.55rem;
+    font-size: clamp(1.2rem, 3.8vw, 1.55rem);
     font-weight: 700;
-    padding: 0.9rem 2.6rem;
+    padding: 0.75rem 1.6rem;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(6, 78, 59, 0.25);
     border: 1.5px solid rgba(255, 255, 255, 0.18);
     letter-spacing: 0.02em;
+    max-width: 100%;
   }
 }
 

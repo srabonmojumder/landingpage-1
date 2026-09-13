@@ -1,5 +1,12 @@
 import '@/styles/globals.scss';
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#092e18',
+};
+
 export const metadata = {
   title: 'সুরমা ভ্যালি চা (Surma Valley Tea) | এক্সপোর্ট কোয়ালিটি অর্গানিক চা',
   description:
